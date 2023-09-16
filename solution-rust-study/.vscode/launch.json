@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'solution-rust-study'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=solution-rust-study",
+                    "--package=solution-rust-study"
+                ],
+                "filter": {
+                    "name": "solution-rust-study",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'solution-rust-study'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=solution-rust-study",
+                    "--package=solution-rust-study"
+                ],
+                "filter": {
+                    "name": "solution-rust-study",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
